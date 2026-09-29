@@ -77,7 +77,7 @@ function Register() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        "http://https://smart-farmer-api-g7q.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -129,7 +129,7 @@ function Register() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/verify-email",
+        "http://https://smart-farmer-api-g7q.onrender.com/api/auth/verify-email",
         {
           method: "POST",
           headers: {
@@ -179,7 +179,7 @@ function Register() {
       setResendLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/resend-otp",
+        "http://https://smart-farmer-api-g7q.onrender.com/api/auth/resend-otp",
         {
           method: "POST",
           headers: {

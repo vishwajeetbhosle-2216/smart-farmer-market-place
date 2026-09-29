@@ -21,7 +21,7 @@ function ProductDetails() {
     const fetchProduct = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/products/${id}`
+          `http://https://smart-farmer-api-g7q.onrender.com/api/products/${id}`
         );
 
         const data = await response.json();
@@ -138,7 +138,7 @@ function ProductDetails() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/orders/create",
+        "http://https://smart-farmer-api-g7q.onrender.com/api/orders/create",
         {
           method: "POST",
 

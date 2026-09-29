@@ -35,7 +35,7 @@ function MyProducts() {
       setMessage("Loading products...");
 
       const response = await fetch(
-        "http://localhost:5000/api/products/my-products",
+        "http://https://smart-farmer-api-g7q.onrender.com/api/products/my-products",
         {
           method: "GET",
           headers: {
@@ -212,7 +212,7 @@ function MyProducts() {
       setEditMessage("Updating product...");
 
       const response = await fetch(
-        `http://localhost:5000/api/products/${editingProduct._id}`,
+        `http://https://smart-farmer-api-g7q.onrender.com/api/products/${editingProduct._id}`,
         {
           method: "PUT",
 
@@ -309,7 +309,7 @@ function MyProducts() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${product._id}`,
+        `http://https://smart-farmer-api-g7q.onrender.com/api/products/${product._id}`,
         {
           method: "DELETE",
 

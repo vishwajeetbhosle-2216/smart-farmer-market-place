@@ -37,7 +37,7 @@ function PriceAssistant() {
           );
 
           const response = await fetch(
-            "http://localhost:5000/api/price-assistant/ask",
+            "http://https://smart-farmer-api-g7q.onrender.com/api/price-assistant/ask",
             {
               method: "POST",
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./FarmerOrders.css";
 
-const API_URL = "http://localhost:5000/api/orders";
+const API_URL = "http://https://smart-farmer-api-g7q.onrender.com/api/orders";
 
 function FarmerOrders() {
   const [orders, setOrders] = useState([]);

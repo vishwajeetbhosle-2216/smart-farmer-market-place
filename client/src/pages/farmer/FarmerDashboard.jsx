@@ -21,7 +21,7 @@ function FarmerDashboard() {
         // =========================
 
         const productsResponse = await fetch(
-          "http://localhost:5000/api/products/my-products",
+          "http://https://smart-farmer-api-g7q.onrender.com/api/products/my-products",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ function FarmerDashboard() {
         // =========================
 
         const ordersResponse = await fetch(
-          "http://localhost:5000/api/orders/farmer-orders",
+          "http://https://smart-farmer-api-g7q.onrender.com/api/orders/farmer-orders",
           {
             headers: {
               Authorization: `Bearer ${token}`,

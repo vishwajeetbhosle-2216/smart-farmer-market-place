@@ -12,7 +12,7 @@ function FarmerEarnings() {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/orders/farmer-orders",
+          "http://https://smart-farmer-api-g7q.onrender.com/api/orders/farmer-orders",
           {
             method: "GET",
             headers: {

@@ -31,7 +31,7 @@ function PriceComparison() {
       // No GPS coordinates are required.
       // Backend searches all active, non-expired products.
       const response = await fetch(
-        `http://localhost:5000/api/products/compare-prices?name=${encodeURIComponent(
+        `http://https://smart-farmer-api-g7q.onrender.com/api/products/compare-prices?name=${encodeURIComponent(
           searchName
         )}`
       );
