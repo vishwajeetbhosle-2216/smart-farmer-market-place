@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./MyOrders.css";
 
-const API_URL = "http://https://smart-farmer-api-g7q.onrender.com/api/orders";
+const API_URL = "https://smart-farmer-api-g7q.onrender.com/api/orders";
 const RETURN_WINDOW_MS = 6 * 60 * 60 * 1000;
 
 function MyOrders() {

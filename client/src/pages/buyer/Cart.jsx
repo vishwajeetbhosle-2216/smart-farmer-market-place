@@ -165,7 +165,7 @@ function Cart() {
       }));
 
       const response = await fetch(
-        "http://https://smart-farmer-api-g7q.onrender.com/api/orders/checkout",
+        "https://smart-farmer-api-g7q.onrender.com/api/orders/checkout",
         {
           method: "POST",
           headers: {

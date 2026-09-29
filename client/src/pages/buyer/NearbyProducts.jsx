@@ -34,7 +34,7 @@ function NearbyProducts() {
     }
 
     const response = await fetch(
-      "http://https://smart-farmer-api-g7q.onrender.com/api/users/location",
+      "https://smart-farmer-api-g7q.onrender.com/api/users/location",
       {
         method: "PUT",
         headers: {
@@ -148,7 +148,7 @@ function NearbyProducts() {
 
       // Fetch products within 30 km.
       const response = await fetch(
-        `http://https://smart-farmer-api-g7q.onrender.com/api/products/nearby?longitude=${longitude}&latitude=${latitude}&maxDistance=30000`
+        `https://smart-farmer-api-g7q.onrender.com/api/products/nearby?longitude=${longitude}&latitude=${latitude}&maxDistance=30000`
       );
 
       const data = await response.json();

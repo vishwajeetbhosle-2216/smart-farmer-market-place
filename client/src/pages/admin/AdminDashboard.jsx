@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./AdminDashboard.css";
 
-const API = "http://https://smart-farmer-api-g7q.onrender.com/api";
+const API = "https://smart-farmer-api-g7q.onrender.com/api";
 
 function AdminDashboard() {
   const [users, setUsers] = useState([]);
@@ -244,7 +244,7 @@ const getImageUrl = (image) => {
   }
 
   // Images stored as backend file paths
-  return `http://https://smart-farmer-api-g7q.onrender.com/${image.replace(
+  return `https://smart-farmer-api-g7q.onrender.com/${image.replace(
     /^\/+/,
     ""
   )}`;

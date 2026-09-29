@@ -344,7 +344,7 @@ function AddProduct() {
 
     try {
       const response = await fetch(
-        "http://https://smart-farmer-api-g7q.onrender.com/api/products/add",
+        "https://smart-farmer-api-g7q.onrender.com/api/products/add",
         {
           method: "POST",
 

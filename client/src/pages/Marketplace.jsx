@@ -27,7 +27,7 @@ function Marketplace() {
         setMessage("Loading products...");
 
         const response = await fetch(
-          "http://https://smart-farmer-api-g7q.onrender.com/api/products"
+          "https://smart-farmer-api-g7q.onrender.com/api/products"
         );
 
         const data = await response.json();

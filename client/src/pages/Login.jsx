@@ -32,7 +32,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://https://smart-farmer-api-g7q.onrender.com/api/auth/login",
+        "https://smart-farmer-api-g7q.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {
@@ -115,7 +115,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://https://smart-farmer-api-g7q.onrender.com/api/auth/forgot-password",
+        "https://smart-farmer-api-g7q.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
           headers: {
@@ -186,7 +186,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "http://https://smart-farmer-api-g7q.onrender.com/api/auth/reset-password",
+        "https://smart-farmer-api-g7q.onrender.com/api/auth/reset-password",
         {
           method: "POST",
           headers: {
