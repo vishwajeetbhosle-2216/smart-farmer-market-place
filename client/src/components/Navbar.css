@@ -1,0 +1,341 @@
+/* =========================================
+   NAVBAR - DESKTOP + MOBILE
+========================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+
+  width: 100%;
+  min-height: 62px;
+  padding: 12px 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #2e7d32;
+  color: #ffffff;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover {
+  color: #d9ffdc;
+}
+
+/* =========================================
+   HAMBURGER
+   Hidden on desktop
+========================================= */
+
+.navbar-toggle {
+  display: none;
+
+  width: 44px;
+  height: 42px;
+  padding: 9px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9px;
+
+  background: transparent;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+
+  border-radius: 5px;
+  background: #ffffff;
+
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.navbar-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-toggle:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* Animate hamburger into X */
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+   All links visible across the top
+========================================= */
+
+.navbar-links {
+  position: static;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex: 1;
+  min-width: 0;
+
+  gap: clamp(10px, 1.5vw, 24px);
+
+  width: auto;
+  max-height: none;
+  overflow: visible;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  animation: none;
+}
+
+.navbar-links a {
+  display: inline-flex;
+  align-items: center;
+
+  width: auto;
+  padding: 9px 0;
+
+  color: #ffffff;
+  background: transparent;
+
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 700;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #d9ffdc;
+  background: transparent;
+}
+
+/* =========================================
+   DESKTOP LOGOUT
+========================================= */
+
+.navbar-logout {
+  flex-shrink: 0;
+
+  padding: 9px 16px;
+  margin: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #216b2a;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.navbar-logout:hover {
+  background: #e3f7e6;
+}
+
+.navbar-logout:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   TABLET AND MOBILE
+   Hamburger visible, links inside dropdown
+========================================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 20px;
+    gap: 12px;
+  }
+
+  /* Show hamburger */
+  .navbar-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Closed menu */
+  .navbar-links {
+    position: absolute;
+
+    top: calc(100% + 6px);
+    left: 12px;
+    right: 12px;
+
+    display: none;
+
+    width: auto;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 3px;
+
+    padding: 10px;
+
+    background: #ffffff;
+    color: #26332a;
+
+    border: 1px solid #dce9de;
+    border-radius: 13px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Open menu when hamburger is clicked */
+  .navbar-links.navbar-links-open {
+    display: flex;
+  }
+
+  .navbar-links a {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 14px 16px;
+
+    color: #26332a;
+    background: transparent;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    border-radius: 8px;
+  }
+
+  .navbar-links a:hover {
+    background: #e8f6eb;
+    color: #176e2a;
+  }
+
+  /* Mobile logout */
+  .navbar-logout {
+    width: 100%;
+    margin-top: 6px;
+    padding: 14px 16px;
+
+    background: #ffe9e9;
+    color: #b82020;
+
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .navbar-logout:hover {
+    background: #c62828;
+    color: #ffffff;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 11px 14px;
+    min-height: 58px;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+  }
+
+  .navbar-toggle {
+    width: 42px;
+    height: 40px;
+  }
+
+  .navbar-links {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 350px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-toggle span,
+  .navbar-links a,
+  .navbar-logout {
+    transition: none;
+  }
+}

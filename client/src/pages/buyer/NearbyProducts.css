@@ -1,0 +1,248 @@
+/* =========================================
+   NEARBY PRODUCTS PAGE
+========================================= */
+
+.nearby-products-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.nearby-products-page h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.nearby-subtitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   LOCATION BUTTON
+========================================= */
+
+.nearby-action {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.find-nearby-button {
+  padding: 13px 24px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background: #1b5e20;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.find-nearby-button:hover {
+  background: #104518;
+}
+
+.find-nearby-button:disabled {
+  background: #555555;
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* =========================================
+   STATUS / MESSAGE
+========================================= */
+
+.nearby-message {
+  text-align: center;
+  color: #ffffff;
+  background: #263238;
+  border: 1px solid #90a4ae;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* =========================================
+   PRODUCTS GRID
+========================================= */
+
+.nearby-products-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.nearby-product-card {
+  background: #ffffff;
+  color: #212121;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+.nearby-product-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1.4;
+}
+
+.nearby-product-card p {
+  margin: 10px 0;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.nearby-product-card strong {
+  color: #111111;
+  font-weight: 800;
+}
+
+/* Product description */
+
+.nearby-product-card .product-description {
+  color: #444444 !important;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Price */
+
+.nearby-product-card .nearby-price {
+  font-size: 23px;
+  font-weight: 800;
+  color: #145a23 !important;
+  margin: 15px 0;
+}
+
+/* Distance */
+
+.nearby-product-card .distance {
+  font-weight: 800;
+  color: #0d47a1 !important;
+  background: #e8f1ff;
+  border: 1px solid #bbd3ff;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/* =========================================
+   VIEW PRODUCT BUTTON
+========================================= */
+
+.view-product-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  border: 2px solid #1b5e20;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-product-button:hover {
+  background: #1b5e20;
+}
+
+.view-product-button:focus-visible,
+.find-nearby-button:focus-visible {
+  outline: 3px solid #ffb300;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+  .nearby-products-page {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .nearby-products-page h1 {
+    font-size: 29px;
+  }
+
+  .nearby-subtitle {
+    font-size: 15px;
+  }
+
+  .nearby-products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nearby-product-card {
+    padding: 20px;
+  }
+
+  .nearby-product-card h2 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nearby-products-page {
+    padding: 12px;
+  }
+
+  .find-nearby-button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .nearby-product-card {
+    padding: 17px;
+  }
+
+  .nearby-product-card h2 {
+    font-size: 21px;
+  }
+
+  .nearby-product-card p {
+    font-size: 14px;
+  }
+
+  .nearby-product-card .nearby-price {
+    font-size: 21px;
+  }
+
+  .view-product-button {
+    font-size: 15px;
+  }
+}

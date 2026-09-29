@@ -1,0 +1,776 @@
+/* =========================================================
+   FARMER EARNINGS PAGE
+========================================================= */
+
+.farmer-earnings-page {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 35px 28px 80px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   EARNINGS HEADER
+========================================================= */
+
+.earnings-header {
+  background: linear-gradient(
+    135deg,
+    #20c94f,
+    #39d85f
+  );
+
+  border-radius: 24px;
+
+  padding: 38px 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white;
+
+  margin-bottom: 24px;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.earnings-badge {
+  display: inline-block;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.earnings-header h1 {
+  margin: 0 0 8px;
+
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.earnings-header p {
+  margin: 0;
+
+  font-size: 16px;
+
+  opacity: 0.95;
+}
+
+.earnings-header-icon {
+  width: 78px;
+  height: 78px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   DATE FILTERS
+========================================================= */
+
+.earnings-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  flex-wrap: wrap;
+}
+
+.earnings-filter {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: #ffffff;
+
+  color: #333;
+
+  padding: 11px 22px;
+
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.earnings-filter:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.earnings-filter.active {
+  background: #25c94f;
+
+  color: white;
+
+  border-color: #25c94f;
+
+  box-shadow:
+    0 6px 16px rgba(37, 201, 79, 0.25);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.earnings-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 38px;
+}
+
+.earning-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 23px 24px;
+
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.14);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.earning-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+.earning-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: #e9f9ed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+  flex-shrink: 0;
+}
+
+.earning-card p {
+  margin: 0 0 5px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.earning-card h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 27px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   PRODUCT PERFORMANCE
+========================================================= */
+
+.product-earnings-section {
+  margin-bottom: 40px;
+}
+
+.product-earnings-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.product-earning-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 20px 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.13);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-earning-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+.product-earning-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.product-earning-info h3 {
+  margin: 0 0 5px;
+
+  color: #222;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.product-earning-info p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+.product-earning-detail span {
+  display: block;
+
+  color: #999;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  margin-bottom: 6px;
+}
+
+.product-earning-detail strong {
+  color: #333;
+
+  font-size: 16px;
+}
+
+.product-earning-detail .sale-amount {
+  color: #21b947;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   SALES SECTION
+========================================================= */
+
+.sales-section {
+  margin-top: 5px;
+}
+
+.sales-section-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  padding: 0 4px;
+}
+
+.sales-section-header
+  > div:first-child
+  > span {
+  color: #31c653;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.sales-section-header h2 {
+  margin: 6px 0 5px;
+
+  color: white;
+
+  font-size: 29px;
+
+  font-weight: 800;
+}
+
+.sales-section-header p {
+  margin: 0;
+
+  color: #c7ccc9;
+
+  font-size: 14px;
+}
+
+.sales-count {
+  background:
+    rgba(50, 201, 79, 0.15);
+
+  border: 1px solid
+    rgba(50, 201, 79, 0.35);
+
+  color: #5bea78;
+
+  padding: 9px 15px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.earnings-message {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  color: #555;
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   NO EARNINGS
+========================================================= */
+
+.no-earnings {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 50px 25px;
+
+  text-align: center;
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.no-earnings-icon {
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.no-earnings h3 {
+  margin: 0 0 8px;
+
+  color: #222;
+
+  font-size: 22px;
+}
+
+.no-earnings p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SALES LIST
+========================================================= */
+
+.sales-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.sale-card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 22px 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1.2fr
+    1.2fr
+    auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.13);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sale-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.17);
+}
+
+
+/* =========================================================
+   SALE PRODUCT
+========================================================= */
+
+.sale-product {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+}
+
+.sale-product-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 14px;
+
+  background: #eaf8ed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+
+  flex-shrink: 0;
+}
+
+.sale-product span,
+.sale-detail span {
+  display: block;
+
+  color: #999;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  margin-bottom: 5px;
+}
+
+.sale-product h3 {
+  margin: 0 0 4px;
+
+  color: #222;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.sale-product p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   SALE DETAILS
+========================================================= */
+
+.sale-detail strong {
+  color: #333;
+
+  font-size: 15px;
+}
+
+.sale-detail small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #999;
+
+  font-size: 11px;
+}
+
+.sale-amount {
+  color: #21b947 !important;
+
+  font-size: 17px !important;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.sale-status span {
+  background: #e8f8ed;
+
+  color: #1ca941;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .sale-card {
+    grid-template-columns:
+      2fr
+      1fr
+      1fr
+      1.2fr
+      1fr;
+
+    gap: 16px;
+  }
+
+  .sale-status {
+    grid-column: 5;
+
+    justify-self: end;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .farmer-earnings-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .earnings-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .product-earning-card {
+    grid-template-columns:
+      2fr
+      1fr;
+  }
+
+  .product-earning-detail:last-child {
+    grid-column: 2;
+  }
+
+  .sale-card {
+    grid-template-columns:
+      2fr
+      1fr
+      1fr;
+  }
+
+  .sale-status {
+    grid-column: 3;
+
+    justify-self: end;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .farmer-earnings-page {
+    padding:
+      25px 15px 55px;
+  }
+
+  .earnings-header {
+    padding: 28px 22px;
+
+    border-radius: 20px;
+  }
+
+  .earnings-header h1 {
+    font-size: 32px;
+  }
+
+  .earnings-header p {
+    font-size: 14px;
+  }
+
+  .earnings-header-icon {
+    width: 55px;
+    height: 55px;
+
+    font-size: 25px;
+  }
+
+  .earnings-filters {
+    gap: 8px;
+  }
+
+  .earnings-filter {
+    padding: 10px 16px;
+
+    font-size: 13px;
+  }
+
+  .earnings-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .sales-section-header {
+    align-items: flex-start;
+
+    gap: 15px;
+
+    flex-direction: column;
+  }
+
+  .product-earning-card {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .product-earning-detail:last-child {
+    grid-column: auto;
+  }
+
+  .sale-card {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 18px;
+  }
+
+  .sale-product {
+    grid-column:
+      1 / -1;
+  }
+
+  .sale-status {
+    grid-column: auto;
+
+    justify-self: start;
+  }
+}

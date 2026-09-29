@@ -1,0 +1,846 @@
+/* =========================================
+   BUYER ORDERS PAGE
+========================================= */
+
+.buyer-orders-page {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 35px 20px 60px;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.buyer-orders-header {
+  background: linear-gradient(135deg, #1b8f3a, #43c463);
+  border-radius: 18px;
+  padding: 30px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 24px rgba(27, 143, 58, 0.18);
+}
+
+.buyer-orders-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.buyer-orders-header h1 {
+  margin: 0 0 7px;
+  font-size: 34px;
+  font-weight: 800;
+  color: white;
+}
+
+.buyer-orders-header p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.buyer-orders-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   ORDER SUMMARY
+========================================= */
+
+.orders-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: 22px;
+  padding: 11px 17px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 11px;
+  color: #166534;
+}
+
+.summary-icon {
+  font-size: 23px;
+}
+
+.orders-summary strong {
+  display: inline-block;
+  font-size: 21px;
+  margin-right: 4px;
+  color: #15803d;
+}
+
+.orders-summary span {
+  font-size: 14px;
+  color: #166534;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.orders-empty {
+  max-width: 600px;
+  margin: 55px auto;
+  padding: 50px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.empty-orders-icon {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.orders-empty h2 {
+  margin: 0 0 9px;
+  font-size: 25px;
+  color: #1f2937;
+}
+
+.orders-empty p {
+  margin: 0 0 23px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.browse-marketplace-button {
+  display: inline-block;
+  padding: 11px 20px;
+  background: #22a447;
+  color: white;
+  text-decoration: none;
+  border-radius: 9px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.browse-marketplace-button:hover {
+  background: #168738;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ORDERS LIST
+========================================= */
+
+.buyer-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================
+   ORDER CARD
+========================================= */
+
+.buyer-order-card {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  transition: 0.2s ease;
+}
+
+.buyer-order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+   FIXED IMAGE SIZE AND CROPPING
+========================================= */
+
+.buyer-order-image {
+  width: 210px;
+  height: 270px;
+  min-height: 270px;
+  align-self: start;
+  flex-shrink: 0;
+  background: #f1f5f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.buyer-order-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.order-no-image {
+  font-size: 55px;
+  opacity: 0.65;
+}
+
+
+/* =========================================
+   ORDER CONTENT
+========================================= */
+
+.buyer-order-content {
+  padding: 24px;
+  min-width: 0;
+}
+
+
+/* =========================================
+   TOP ROW
+========================================= */
+
+.order-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.order-number {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.order-top-row h2 {
+  margin: 0;
+  font-size: 23px;
+  color: #111827;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.order-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.status-accepted {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.status-preparing {
+  background: #fefce8;
+  color: #a16207;
+}
+
+.status-ready {
+  background: #ecfeff;
+  color: #0e7490;
+}
+
+.status-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.status-default {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+
+/* =========================================
+   FARMER
+========================================= */
+
+.order-farmer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+  margin-bottom: 17px;
+}
+
+.farmer-icon {
+  font-size: 24px;
+}
+
+.order-farmer small {
+  display: block;
+  color: #6b7280;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.order-farmer strong {
+  display: block;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ORDER DETAILS
+========================================= */
+
+.order-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 17px;
+}
+
+.order-detail-box {
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+.order-detail-box span {
+  display: block;
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.order-detail-box strong {
+  display: block;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.order-detail-box strong small {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.total-amount {
+  color: #15803d !important;
+  font-size: 16px !important;
+}
+
+
+/* =========================================
+   PAYMENT
+========================================= */
+
+.order-payment {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 14px;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 14px;
+}
+
+.order-payment div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-payment span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.order-payment strong {
+  font-size: 13px;
+  color: #1f2937;
+}
+
+.payment-paid {
+  color: #15803d !important;
+}
+
+.payment-pending {
+  color: #b45309 !important;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.orders-message {
+  text-align: center;
+  color: #6b7280;
+  padding: 30px;
+  font-size: 15px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .buyer-order-card {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+
+  .buyer-order-image {
+    width: 170px;
+    height: 250px;
+    min-height: 250px;
+    align-self: start;
+  }
+
+  .order-details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .buyer-orders-page {
+    padding: 22px 12px 45px;
+  }
+
+  .buyer-orders-header {
+    padding: 24px 20px;
+    border-radius: 15px;
+  }
+
+  .buyer-orders-header h1 {
+    font-size: 28px;
+  }
+
+  .buyer-orders-header p {
+    font-size: 13px;
+  }
+
+  .buyer-orders-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+  }
+
+  .orders-summary {
+    margin-left: 0;
+  }
+
+  .buyer-order-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buyer-order-image {
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+    align-self: auto;
+    flex-shrink: 0;
+  }
+
+  .buyer-order-content {
+    padding: 18px;
+  }
+
+  .order-top-row {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .order-top-row h2 {
+    font-size: 21px;
+  }
+
+  .order-details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .order-payment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-card-footer {
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .order-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-orders-icon {
+    display: none;
+  }
+}
+
+
+/* =========================
+   RETURN REQUEST PANEL
+========================= */
+
+.return-request-panel {
+  margin-top: 22px;
+  padding: 20px;
+  background: #f4fbf5;
+  border: 1px solid #b8dfc0;
+  border-radius: 12px;
+  color: #173b23;
+}
+
+.return-request-panel h3 {
+  margin: 0 0 12px;
+  color: #14532d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.return-note {
+  margin: 10px 0 16px;
+  color: #294b33;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.return-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.return-form label {
+  color: #173b23;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.return-form select,
+.return-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #9cbea4;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172b1c;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.return-form select:focus,
+.return-form textarea:focus {
+  outline: 2px solid #278345;
+  outline-offset: 2px;
+}
+
+.return-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.return-character-count {
+  color: #365940;
+  font-size: 12px;
+  text-align: right;
+}
+
+.return-submit-button {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #18743a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.return-submit-button:hover {
+  background: #105b2c;
+}
+
+.return-submit-button:disabled {
+  background: #6b8c74;
+  cursor: not-allowed;
+}
+
+.return-form-message {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.return-form-message.success {
+  background: #d9fbe3;
+  color: #14532d;
+  border: 1px solid #86d49b;
+}
+
+.return-form-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.return-request-info {
+  margin-bottom: 14px;
+}
+
+.return-request-info p {
+  margin: 8px 0;
+  color: #173b23;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.return-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #c8e2ce;
+  color: #173b23;
+}
+
+.return-status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.return-status-requested {
+  background: #fff0c2;
+  color: #754b00;
+}
+
+.return-status-accepted,
+.return-status-received,
+.return-status-refunded {
+  background: #d9fbe3;
+  color: #14532d;
+}
+
+.return-status-disputed {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.return-status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.return-farmer-response {
+  margin-top: 14px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #c8e2ce;
+  border-radius: 8px;
+  color: #173b23;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+
+  .return-request-panel {
+    padding: 15px;
+  }
+
+  .return-status-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .return-submit-button {
+    width: 100%;
+  }
+}
+
+
+/* ==============================
+   SIX-HOUR RETURN DEADLINE
+============================== */
+
+.return-deadline-box {
+  padding: 16px;
+  margin: 18px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.return-deadline-box p {
+  margin: 7px 0;
+  color: #111827;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.return-deadline-active {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+.return-deadline-active .return-countdown {
+  color: #065f46;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.return-deadline-expired {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.return-deadline-expired .return-countdown {
+  color: #991b1b;
+  font-weight: 800;
+}
+
+.return-deadline-expired p {
+  color: #7f1d1d;
+}
+
+.return-deadline-box .return-note {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+/* =========================
+   INVOICE BUTTON
+========================= */
+
+.invoice-action {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.invoice-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #176b35;
+  color: #ffffff;
+  border: 2px solid #176b35;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.invoice-button:hover {
+  background: #105329;
+  border-color: #105329;
+}
+
+.invoice-button:focus-visible {
+  outline: 3px solid #8bd49c;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .invoice-button {
+    width: 100%;
+  }
+}

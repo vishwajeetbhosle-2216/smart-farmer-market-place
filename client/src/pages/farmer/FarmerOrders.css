@@ -1,0 +1,1018 @@
+/* ================================
+   FARMER ORDERS PAGE
+================================ */
+
+.farmer-orders-page {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 35px 20px 60px;
+  color: #1f2937;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.farmer-orders-header {
+  background: linear-gradient(135deg, #1b8f3a, #43c463);
+  color: white;
+  padding: 30px 35px;
+  border-radius: 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 24px rgba(27, 143, 58, 0.18);
+}
+
+.farmer-orders-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.farmer-orders-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.farmer-orders-header p {
+  margin: 7px 0 0;
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+/* ================================
+   MESSAGE
+================================ */
+
+.farmer-orders-message {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 13px 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================================
+   ORDERS LIST
+================================ */
+
+.farmer-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================================
+   ORDER CARD
+================================ */
+
+.farmer-order-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+  padding: 25px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  transition: 0.2s ease;
+}
+
+.farmer-order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================
+   ORDER HEADER
+================================ */
+
+.farmer-order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.order-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.farmer-order-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #111827;
+  font-weight: 800;
+}
+
+/* ================================
+   STATUS
+================================ */
+
+.order-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.status-pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.status-accepted {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.status-preparing {
+  background: #fefce8;
+  color: #a16207;
+}
+
+.status-ready {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.status-completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* ================================
+   DETAILS
+================================ */
+
+.farmer-order-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 20px 0;
+}
+
+.order-detail {
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+  padding: 13px 15px;
+  min-width: 0;
+}
+
+.order-detail span {
+  display: block;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.order-detail strong {
+  display: block;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 750;
+  word-break: break-word;
+}
+
+.order-detail .total-amount {
+  color: #15803d;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.farmer-order-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #eeeeee;
+}
+
+.farmer-order-actions button {
+  border: none;
+  border-radius: 9px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.accept-button,
+.action-primary {
+  background: #22a447;
+  color: white;
+}
+
+.accept-button:hover,
+.action-primary:hover {
+  background: #168738;
+  transform: translateY(-1px);
+}
+
+.reject-button {
+  background: #fff1f2;
+  color: #dc2626;
+  border: 1px solid #fecdd3 !important;
+}
+
+.reject-button:hover {
+  background: #fee2e2;
+}
+
+/* ================================
+   COMPLETED / REJECTED
+================================ */
+
+.completed-message {
+  margin-top: 17px;
+  padding: 12px 15px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+  color: #15803d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rejected-message {
+  margin-top: 17px;
+  padding: 12px 15px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.farmer-orders-empty {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 17px;
+  padding: 55px 25px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.empty-order-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.farmer-orders-empty h2 {
+  margin: 0 0 8px;
+  color: #1f2937;
+  font-size: 23px;
+}
+
+.farmer-orders-empty p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+  .farmer-order-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .farmer-orders-page {
+    padding: 20px 12px 40px;
+  }
+
+  .farmer-orders-header {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .farmer-orders-header h1 {
+    font-size: 27px;
+  }
+
+  .farmer-orders-header p {
+    font-size: 13px;
+  }
+
+  .farmer-order-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .farmer-order-header {
+    align-items: flex-start;
+  }
+
+  .farmer-order-header h2 {
+    font-size: 19px;
+  }
+
+  .order-status {
+    min-width: 75px;
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .farmer-order-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .order-detail {
+    padding: 11px 13px;
+  }
+
+  .farmer-order-actions {
+    flex-direction: column;
+  }
+
+  .farmer-order-actions button {
+    width: 100%;
+  }
+}/* =====================================
+   FARMER RETURN REQUEST REVIEW
+===================================== */
+
+.farmer-return-panel {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #111827;
+}
+
+.farmer-return-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.farmer-return-header h3 {
+  margin: 0 0 8px;
+  color: #14532d;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.farmer-return-header p {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.farmer-return-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.return-status-requested {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.return-status-accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.return-status-disputed {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.return-status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.return-status-received {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.return-status-refunded {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* RETURN DETAILS */
+
+.farmer-return-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.farmer-return-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  min-width: 0;
+}
+
+.farmer-return-details span {
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.farmer-return-details strong {
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* EVIDENCE */
+
+.farmer-return-evidence {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.farmer-return-evidence strong {
+  color: #111827;
+}
+
+.farmer-return-evidence a {
+  color: #047857;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* REVIEW FORM */
+
+.farmer-return-review-form {
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.farmer-return-review-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #111827;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.farmer-return-review-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 110px;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #9ca3af;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+}
+
+.farmer-return-review-form textarea:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+.farmer-return-review-form textarea::placeholder {
+  color: #6b7280;
+}
+
+.farmer-return-char-count {
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 16px;
+  text-align: right;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+/* REVIEW BUTTONS */
+
+.farmer-return-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.farmer-return-actions button {
+  flex: 1 1 150px;
+  min-height: 46px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.farmer-return-actions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.farmer-return-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.farmer-return-accept {
+  background: #15803d;
+  color: #ffffff;
+}
+
+.farmer-return-dispute {
+  background: #d97706;
+  color: #ffffff;
+}
+
+.farmer-return-reject {
+  background: #b91c1c;
+  color: #ffffff;
+}
+
+/* REVIEWED REQUEST */
+
+.farmer-return-reviewed {
+  padding: 16px;
+  margin-top: 14px;
+  border-radius: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.farmer-return-reviewed p {
+  margin: 5px 0 10px;
+  color: #14532d;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.farmer-return-reviewed small {
+  display: block;
+  margin-top: 10px;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* RESULT MESSAGE */
+
+.farmer-return-message {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.farmer-return-message.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.farmer-return-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* REFUND TRACKING */
+
+.farmer-return-refund {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.farmer-return-refund span {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.farmer-return-refund strong {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.farmer-return-note {
+  margin-top: 14px;
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .farmer-return-panel {
+    padding: 16px;
+  }
+
+  .farmer-return-details {
+    grid-template-columns: 1fr;
+  }
+
+  .farmer-return-actions {
+    flex-direction: column;
+  }
+
+  .farmer-return-actions button {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+/* =====================================
+   FARMER ORDER PRODUCT IMAGE
+===================================== */
+
+.farmer-order-product-image {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.farmer-order-product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+/* Mobile image */
+
+@media (max-width: 600px) {
+  .farmer-order-product-image {
+    max-width: 100%;
+    height: 200px;
+  }
+}
+/* =========================================
+   RETURN WORKFLOW - PROFESSIONAL FORM LAYOUT
+   Pickup, Inspection & Refund Tracking
+========================================= */
+
+/* Keep all return workflow sections full width */
+.farmer-return-panel,
+.farmer-return-review-form {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.farmer-return-review-form {
+  margin-top: 24px;
+  padding: 24px;
+  background: #f8fafc;
+  border: 1px solid #dbe3ec;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Section headings */
+.farmer-return-review-form h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dbe3ec;
+  color: #14532d;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* Pickup, inspection and refund detail grids */
+.farmer-return-review-form .farmer-return-details {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.farmer-return-review-form .farmer-return-details > div {
+  padding: 17px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.farmer-return-review-form .farmer-return-details span {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.farmer-return-review-form .farmer-return-details strong {
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* Labels */
+.farmer-return-review-form > label {
+  display: block;
+  width: 100%;
+  margin: 20px 0 9px;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* All inputs and dropdowns */
+.farmer-return-review-form > input,
+.farmer-return-review-form > select,
+.farmer-return-review-form > textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  margin: 0 0 18px;
+  padding: 13px 15px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Textarea sizing */
+.farmer-return-review-form > textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+/* Date picker */
+.farmer-return-review-form > input[type="datetime-local"] {
+  min-height: 54px;
+  cursor: pointer;
+}
+
+/* Refund amount */
+.farmer-return-review-form > input[type="number"] {
+  appearance: auto;
+}
+
+/* Dropdown */
+.farmer-return-review-form > select {
+  min-height: 52px;
+  cursor: pointer;
+}
+
+/* Focus state */
+.farmer-return-review-form > input:focus,
+.farmer-return-review-form > select:focus,
+.farmer-return-review-form > textarea:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.14);
+}
+
+/* Placeholder text */
+.farmer-return-review-form > input::placeholder,
+.farmer-return-review-form > textarea::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+/* Disabled fields */
+.farmer-return-review-form > input:disabled,
+.farmer-return-review-form > select:disabled,
+.farmer-return-review-form > textarea:disabled {
+  background: #f1f5f9;
+  color: #475569;
+  cursor: not-allowed;
+}
+
+/* Full-width primary buttons */
+.farmer-return-review-form > button.action-primary {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #15803d;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.farmer-return-review-form > button.action-primary:hover:not(:disabled) {
+  background: #166534;
+  transform: translateY(-1px);
+}
+
+.farmer-return-review-form > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Inspection action buttons */
+.farmer-return-review-form .farmer-return-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.farmer-return-review-form .farmer-return-actions button {
+  flex: 1 1 200px;
+  min-height: 50px;
+  padding: 13px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* Workflow messages */
+.farmer-return-review-form .completed-message {
+  margin-top: 18px;
+  padding: 15px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Return panel explanatory note */
+.farmer-return-panel > .farmer-return-note {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1e40af;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .farmer-orders-page {
+    padding: 25px 16px 45px;
+  }
+
+  .farmer-return-panel {
+    padding: 20px;
+  }
+
+  .farmer-return-review-form {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .farmer-return-panel {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .farmer-return-review-form {
+    padding: 16px;
+    margin-top: 18px;
+    border-radius: 12px;
+  }
+
+  .farmer-return-review-form h3 {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+
+  .farmer-return-review-form .farmer-return-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .farmer-return-review-form > input,
+  .farmer-return-review-form > select,
+  .farmer-return-review-form > textarea {
+    font-size: 16px;
+  }
+
+  .farmer-return-review-form .farmer-return-actions {
+    flex-direction: column;
+  }
+
+  .farmer-return-review-form .farmer-return-actions button {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .farmer-return-review-form > button.action-primary {
+    width: 100%;
+  }
+
+  .farmer-return-panel > .farmer-return-note {
+    font-size: 13px;
+    padding: 13px;
+  }
+}

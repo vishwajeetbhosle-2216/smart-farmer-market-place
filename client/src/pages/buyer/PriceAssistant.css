@@ -1,0 +1,190 @@
+.price-assistant-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f4f7f4;
+}
+
+.price-assistant-container {
+  max-width: 850px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.price-assistant-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.assistant-icon {
+  font-size: 45px;
+}
+
+.price-assistant-header h1 {
+  margin: 0;
+  color: #1b5e20;
+}
+
+.price-assistant-header p {
+  margin: 6px 0 0;
+  color: #555;
+}
+
+.chat-area {
+  min-height: 250px;
+  padding: 25px 0;
+}
+
+.chat-message {
+  max-width: 75%;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+
+.user-message {
+  margin-left: auto;
+  background: #e8f5e9;
+}
+
+.assistant-message {
+  margin-right: auto;
+  background: #f1f1f1;
+}
+
+.message-label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.message-content {
+  color: #222;
+  line-height: 1.5;
+}
+
+.question-area {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.question-area input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.question-area input:focus {
+  border-color: #2e7d32;
+}
+
+.question-area button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.question-area button:hover {
+  background: #1b5e20;
+}
+
+.question-area button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.assistant-status {
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #555;
+}
+
+.marketplace-data {
+  margin-top: 20px;
+}
+
+.marketplace-data h2 {
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.marketplace-product {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.marketplace-product h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.marketplace-product p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.example-questions {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.example-questions p {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.example-questions button {
+  margin: 5px;
+  padding: 9px 14px;
+  border: 1px solid #2e7d32;
+  border-radius: 20px;
+  background: white;
+  color: #2e7d32;
+  cursor: pointer;
+}
+
+.example-questions button:hover {
+  background: #e8f5e9;
+}
+
+@media (max-width: 600px) {
+  .price-assistant-container {
+    padding: 20px;
+  }
+
+  .price-assistant-header {
+    align-items: flex-start;
+  }
+
+  .chat-message {
+    max-width: 90%;
+  }
+
+  .question-area {
+    flex-direction: column;
+  }
+
+  .question-area button {
+    width: 100%;
+  }
+}

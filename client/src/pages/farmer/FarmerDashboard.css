@@ -1,0 +1,789 @@
+/* =========================================
+   FARMER DASHBOARD
+========================================= */
+
+.farmer-dashboard-page {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 38px 28px 75px;
+
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   WELCOME HERO
+========================================= */
+
+.farmer-welcome {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 34px 38px;
+
+  margin-bottom: 24px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #165b2a 0%,
+      #23883b 55%,
+      #35b94f 100%
+    );
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Decorative background */
+
+.farmer-welcome::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  right: -70px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.welcome-content {
+  position: relative;
+
+  z-index: 1;
+
+  min-width: 0;
+}
+
+
+.farmer-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 7px 13px;
+
+  margin-bottom: 11px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+
+.farmer-welcome h1 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 38px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+
+.farmer-welcome p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: #e4f4e8;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+.farmer-welcome-icon {
+  position: relative;
+
+  z-index: 1;
+
+  width: 88px;
+  height: 88px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  font-size: 44px;
+
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.farmer-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+.stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 0;
+
+  padding: 19px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce6df;
+
+  box-shadow:
+    0 7px 22px rgba(0, 0, 0, 0.13);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 27px rgba(0, 0, 0, 0.18);
+}
+
+
+.stat-icon {
+  width: 47px;
+  height: 47px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e7f7ea;
+
+  border: 1px solid #d2ecd7;
+
+  font-size: 23px;
+}
+
+
+.stat-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.stat-info span {
+  color: #68766d;
+
+  font-size: 11px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.stat-info strong {
+  color: #176d2c;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   SALES CARD
+========================================= */
+
+.sales-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px 28px;
+
+  margin-bottom: 36px;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #155326,
+      #247b38
+    );
+
+  border: 1px solid
+    rgba(100, 220, 120, 0.2);
+
+  box-shadow:
+    0 9px 27px rgba(0, 0, 0, 0.17);
+}
+
+
+.sales-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -55px;
+  top: -75px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+
+.sales-card > div:first-child {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.sales-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #d7eedc;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.sales-card h2 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 32px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+
+.sales-card p {
+  margin: 0;
+
+  color: #c9e5cf;
+
+  font-size: 12px;
+}
+
+
+.sales-icon {
+  position: relative;
+
+  z-index: 1;
+
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  font-size: 28px;
+}
+
+
+/* =========================================
+   MY FARM SECTION
+========================================= */
+
+.farmer-section {
+  margin-bottom: 32px;
+}
+
+
+.section-heading {
+  margin-bottom: 19px;
+}
+
+
+.section-heading h2 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+.section-heading p {
+  margin: 0;
+
+  color: #cbd8cf;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   ACTION CARDS
+========================================= */
+
+.farmer-action-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+.farmer-action-card {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  min-height: 255px;
+
+  padding: 23px;
+
+  box-sizing: border-box;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce6df;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.14);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.farmer-action-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+.action-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  border-radius: 13px;
+
+  background: #e7f7ea;
+
+  border: 1px solid #d1ecd7;
+
+  font-size: 25px;
+}
+
+
+.farmer-action-card h3 {
+  margin: 0 0 8px;
+
+  color: #1c2a21;
+
+  font-size: 19px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+.farmer-action-card p {
+  margin: 0;
+
+  color: #66736b;
+
+  font-size: 12.5px;
+
+  line-height: 1.6;
+}
+
+
+.farmer-action-card button {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 11px 15px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #32b94e;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px rgba(50, 185, 78, 0.2);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.farmer-action-card button:hover {
+  background: #27a844;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   FARMER TIP
+========================================= */
+
+.farmer-tip {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 18px 22px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(50, 185, 78, 0.11);
+
+  border: 1px solid
+    rgba(80, 205, 100, 0.25);
+}
+
+
+.tip-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 23px;
+}
+
+
+.farmer-tip h3 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+
+.farmer-tip p {
+  margin: 0;
+
+  color: #d1dfd5;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .farmer-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .farmer-action-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .farmer-dashboard-page {
+    padding: 25px 15px 50px;
+  }
+
+
+  .farmer-welcome {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 27px 20px;
+
+    gap: 17px;
+  }
+
+
+  .farmer-welcome h1 {
+    font-size: 29px;
+  }
+
+
+  .farmer-welcome p {
+    font-size: 13px;
+  }
+
+
+  .farmer-welcome-icon {
+    width: 66px;
+    height: 66px;
+
+    font-size: 34px;
+  }
+
+
+  .farmer-stats {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+
+  .stat-card {
+    padding: 14px 12px;
+
+    gap: 9px;
+
+    border-radius: 12px;
+  }
+
+
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+  }
+
+
+  .stat-info {
+    gap: 4px;
+  }
+
+
+  .stat-info span {
+    font-size: 9px;
+  }
+
+
+  .stat-info strong {
+    font-size: 21px;
+  }
+
+
+  .sales-card {
+    padding: 19px;
+
+    margin-bottom: 28px;
+
+    border-radius: 14px;
+  }
+
+
+  .sales-card h2 {
+    font-size: 26px;
+  }
+
+
+  .sales-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 23px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+
+  .farmer-action-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .farmer-action-card {
+    min-height: 215px;
+
+    padding: 19px;
+
+    border-radius: 14px;
+  }
+
+
+  .farmer-tip {
+    align-items: flex-start;
+
+    padding: 16px;
+
+    gap: 12px;
+  }
+
+
+  .tip-icon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 20px;
+  }
+
+}
